@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Задача 6</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header"></div>
+        <main class="page">
+            <div class="page__container">
+                <ul class="list">
+                    <li class="item">
+                        <h3 class="title-item">Задача 6.</h3>
+                        <p>З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</p>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script>
+        // 1.Вводимо необхідні данні
+        let costOfGoods1 = parseFloat(prompt('Введіть вартість першого товару', '0'))
+        let quantOfGoods1 = parseFloat(prompt('Введіть кількість першого товару', '0'))
+
+        let costOfGoods2 = parseFloat(prompt('Введіть вартість другого товару', '0')) 
+        let quantOfGoods2 = parseFloat(prompt('Введіть кількість другого товару', '0'))
+
+        let costOfGoods3 = parseFloat(prompt('Введіть вартість третього товару', '0'))
+        let quantOfGoods3 = parseFloat(prompt('Введіть кількість третього товару', '0'))
+        
+        // 2. Знаходимо результат
+        let totalCostGoods1 = costOfGoods1 * quantOfGoods1
+        let totalCostGoods2 = costOfGoods2 * quantOfGoods2
+        let totalCostGoods3 = costOfGoods3 * quantOfGoods3
+
+        let totalPrice = totalCostGoods1 + totalCostGoods2 + totalCostGoods3
+
+        // 3. Виводимо результат
+        document.write(` 
+        <h2>Результат</h2>
+        <table border = '2px'>
+            <tr>
+                <th>Найменування</th>
+                <th>Вартість, грн</th>
+                <th>Кількість</th>
+                <th>Сума, грн</th>
+            </tr>
+            <tr>
+                <th>Перший товар</th>
+                <td>${costOfGoods1.toFixed(2)}</td>
+                <td>${quantOfGoods1}</td>
+                <td>${totalCostGoods1.toFixed(2)}</td>
+            </tr>
+            <tr>
+                <th>Другий товар</th>
+                <td>${costOfGoods2.toFixed(2)}</td>
+                <td>${quantOfGoods2}</td>
+                <td>${totalCostGoods2.toFixed(2)}</td>
+            </tr>
+            <tr>
+                <th>Третій товар</th>
+                <td>${costOfGoods3.toFixed(2)}</td>
+                <td>${quantOfGoods3}</td>
+                <td>${totalCostGoods3.toFixed(2)}</td>
+            </tr> 
+            <td colspan="3"><strong>Загальна вартість</strong></td>
+                <td><strong>${totalPrice.toFixed(2)}</strong></td>
+        </table> 
+    `)   
+    </script>
+</body>
+</html>

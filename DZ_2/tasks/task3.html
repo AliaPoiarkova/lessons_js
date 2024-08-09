@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Задача 3</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header"></div>
+        <main class="page">
+            <div class="page__container">
+                <ul class="list">
+                    <li class="item">
+                        <h3 class="title-item">Задача 3.</h3>
+                        <p>Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).</p>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script>
+        // 1.Вводимо необхідні данні 
+        let costOfProdact = parseFloat(prompt('Введіть вартість товару', '0'))
+        let quantOfProdact = parseFloat(prompt('Введіть кількість товару', '0'))
+        const percentage = 5
+        // 2. Знаходимо результат
+        let totalCost = costOfProdact * quantOfProdact
+        let percentOfTotalCost = totalCost * percentage / 100
+        let sum = totalCost + percentOfTotalCost 
+
+        // 3. Виводимо результат 
+        
+        document.write(`
+        <h2>Результат</h2>
+        <table border = '2px'>
+            <tr>
+                <th>Вартість товару</th>
+                <td>${costOfProdact} грн</td>
+            </tr>
+            <tr>
+                <th>Кількість товару</th>
+                <td>${quantOfProdact} шт</td>
+            </tr>
+            <tr>
+                <th>Загальна вартість товару</th>
+                <td>${totalCost} грн</td>
+            </tr> 
+            <tr>
+                <th>ПДВ 5%</th>
+                <td>${percentOfTotalCost} грн</td>
+            </tr> 
+            <tr>
+                <th>Загальна вартість товару з ПДВ</th>
+                <td>${sum} грн</td>
+            </tr> 
+        </table>      `)
+    </script>
+</body>
+</html>

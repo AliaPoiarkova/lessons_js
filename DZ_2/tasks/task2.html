@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Задача 2</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header"></div>
+        <main class="page">
+            <div class="page__container">
+                <ul class="list">
+                    <li class="item">
+                        <h3 class="title-item">Задача 2.</h3>
+                        <p>Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років.</p>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script>
+        // 1.Вводимо необхідні данні 
+        let yearOfBirth = parseInt(prompt('Введіть рік народження', '0'))
+        let thisYear = parseInt(prompt('Введіть поточний рік', '0'))
+        // 2. Знаходимо результат
+        let numberOfYears = thisYear - yearOfBirth 
+        // 3. Виводимо результат 
+        document.write(`
+        <h2>Результат</h2>
+        Кількість років = ${numberOfYears}`)
+    </script>
+</body>
+</html>
