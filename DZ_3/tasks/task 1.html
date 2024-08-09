@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+<body>
+    <h3> Задача №1. З клавіатури вводяться імена двох дітей та кількість у них цукерок. Вивести не екран ім’я тієї дитини, у якої кількість цукерок є більшою, або вивести, що кількість однакова.</h3>
+    
+<script>
+    // І'мя першої дитини - nameOfFirstChild
+    //  Кількість цукерок у першої дитини - numberOfSweetsFirstChild
+    // І'мя другої дитини - nameOfSecondChild
+    //  Кількість цукерок у другої дитини - numberOfSweetsSecondChild
+
+     // 1.Вводимо необхідні данні
+    let nameOfFirstChild = prompt('Введіть і\'мя першої дитини', 'Іван')
+    let numberOfSweetsFirstChild = parseInt(prompt('Введіть кількість цукерок у першої дитини', '10'))
+    let nameOfSecondChild = prompt('Введіть і\'мя другої дитини', 'Олена')
+    let numberOfSweetsSecondChild = parseInt(prompt('Введіть кількість цукерок у другої дитини', '8'))
+
+     // 2. Знаходимо результат
+    if(numberOfSweetsFirstChild > numberOfSweetsSecondChild)
+        document.write(`У ${nameOfFirstChild} більше цукерок`)
+    else if(numberOfSweetsSecondChild > numberOfSweetsFirstChild)
+        document.write(`У ${nameOfSecondChild} більше цукерок`)
+    else
+        document.write(`Кількість цукерок однакова`)
+    
+     // 3. Виводимо результат
+</script> 
+</body>
+</html>
