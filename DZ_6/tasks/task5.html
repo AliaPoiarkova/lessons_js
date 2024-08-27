@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5</title>
+</head>
+<body>
+    <h3>Задача №5. З клавіатури вводиться вартість одиниці товару. Поки користувач не введе суму грошей, яка достатня для купівлі товару або не відмовиться від купівлі давати можливість вводити суму грошей.</h3>
+    <script>
+        const prodactPraice = parseInt(prompt('Введіть вартість одиниці товару', '10000'))
+        let totalMoney = 0
+            
+        while(totalMoney < prodactPraice){
+            const userMoney = parseInt(prompt(`Введіть скільки у вас є грошей. Потрібно ще ${totalMoney - prodactPraice}`))
+        if(isNaN(userMoney)){
+        alert('Ввкдіть коректну суму')
+        continue
+    }
+        totalMoney +=   userMoney   
+        if(totalMoney >= prodactPraice){
+            alert('Вітаю! У вас достатньо грошей для купівлі товару.')
+            break
+        }
+        const userContinue = confirm('У вас недостатьньо грошей. Бажаєте продовжити?')
+            if(!userContinue){
+                alert('Ви відмовились від покупки.')
+                break
+            }
+        }
+    </script>
+</body>
+</html>

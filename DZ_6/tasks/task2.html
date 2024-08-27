@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+<body>
+    <h3>Задача №2. З клавіатури вводиться число. Знаходити суму цифр до тих пір. Поки сума не стане більшую за 20.</h3>
+    <script>
+        // const totalSum = 20
+        // let sum = 0
+        // do{
+        //     let userNumber = parseInt(prompt('Введіть число'))
+        //     sum+=userNumber
+        // }while(sum<totalSum)
+        // alert('Вітаю!')
+        const totalSum = 20
+        let userNumber1 = parseInt(prompt('Введіть суму, яка у вас є'))
+        while(userNumber1<totalSum){
+            let userNumber2 = parseInt(prompt(`Додайте ще грошей ${totalSum - userNumber1}`))
+            userNumber1+=userNumber2
+        }
+        alert('Вітаю!')
+    </script>
+</body>
+</html>

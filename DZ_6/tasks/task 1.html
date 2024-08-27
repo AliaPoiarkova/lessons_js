@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+<body>
+    <h3> Задача 1.  З клавіатури вводитяться числа поки не буде введено 0. Знайти суму чисел.</h3>
+    
+<script>
+    let totalsum=0
+    let userNumber=0
+    do{
+        userNumber = parseInt(prompt(`Введіть число`))
+        totalsum+= userNumber 
+    }
+    while(userNumber !== 0){
+        // let userNumber = parseFloat(prompt(`Введіть число`))
+        alert(`Сума чисел: ${totalsum}`)
+        // document.write(`${totalsum}`)
+    }
+    
+</script> 
+</body>
+</html>
