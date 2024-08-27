@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 7</title>
+</head>
+<body>
+    <h3>Задача №7. Користувача поступово вводить показники температури протягом року. Знайти середню температуру.</h3>
+    <script>
+        totalTemp = 0
+        for(let month = 1; month <=12; month++){
+            tempMonth = parseInt(prompt(`Введіть температуру ${month} місяця`))
+            totalTemp += tempMonth
+        }
+        averageTemp = totalTemp/12
+        document.write(`Сeредня температура = ${averageTemp.toFixed(2)} градусів`)
+    </script>
+</body>
+</html>

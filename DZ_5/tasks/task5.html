@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5</title>
+</head>
+<style>
+    div{
+        display: inline-block;
+        border: 2px solid blue;
+        margin: 10px;
+    }
+</style>
+<body>
+    <h3>Задача №5. Створити 10 елементів для введення цін продуктів.</h3>
+    <script>
+count = 0
+for(let priceOfProdact = 1; priceOfProdact <= 10; priceOfProdact++){
+    let count = parseFloat(prompt(`Введіть ціну товару ${priceOfProdact}`))
+    document.write(`<div>Ціна товару ${priceOfProdact} = ${count}</div><br>`)
+}     
+    </script>
+</body>
+</html>
