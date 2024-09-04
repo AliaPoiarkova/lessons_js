@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task4</title>
+  </head>
+  <body>
+    <h3>
+      Задача 4. Створити функцію, яка для 3 заданих чисел знаходить одночасно
+      декілька результатів: кількість парних, кількість додатних, кількість
+      більших за 100.
+    </h3>
+    <script>
+      let userNum1 = parseFloat(prompt("Введіть перше число"));
+      let userNum2 = parseFloat(prompt("Введіть друге число"));
+      let userNum3 = parseFloat(prompt("Введіть третє число"));
+
+      function getEvenNum(userNum1, userNum2, userNum3) {
+        let evenAmountNum = 0;
+        if (userNum1 % 2 === 0) evenAmountNum++;
+        if (userNum2 % 2 === 0) evenAmountNum++;
+        if (userNum3 % 2 === 0) evenAmountNum++;
+        return evenAmountNum;
+      }
+      let evenAmountNum = getEvenNum(userNum1, userNum2, userNum3);
+
+      function getPositiveNum(userNum1, userNum2, userNum3) {
+        let positiveAmountNum = 0;
+        if (userNum1 > 0) positiveAmountNum++;
+        if (userNum2 > 0) positiveAmountNum++;
+        if (userNum3 > 0) positiveAmountNum++;
+        return positiveAmountNum;
+      }
+      let positiveAmountNum = getPositiveNum(userNum1, userNum2, userNum3);
+
+      function getBigNum(userNum1, userNum2, userNum3) {
+        let bigAmountNum = 0;
+        if (userNum1 > 100) bigAmountNum++;
+        if (userNum2 > 100) bigAmountNum++;
+        if (userNum3 > 100) bigAmountNum++;
+        return bigAmountNum;
+      }
+      let bigAmountNum = getBigNum(userNum1, userNum2, userNum3);
+
+      document.write(`Для чисел: ${userNum1}, ${userNum2}, ${userNum3} <br>
+  Кількість парних чисел: ${evenAmountNum} <br> 
+  Кількість додатних чисел: ${positiveAmountNum} <br>
+  Кількість більших чисел за 100: ${bigAmountNum} <br>`);
+    </script>
+  </body>
+</html>

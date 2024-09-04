@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+<body>
+    <h3>Задача №2. Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.</h3>
+    <script>
+        let dayNumber = parseInt(prompt("Введіть номер дня 1-7"));
+        function getdeterminantDay(dayNumber) {
+            let dayName;
+            switch (dayNumber) {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                    dayName = "Робочий день";
+                    break;
+                case 6:
+                case 7:
+                    dayName = "Вихідний день";
+                    break;
+                default:
+                    throw new Error("Неправильний номер дня");
+            }
+            return dayName;
+        }
+        try {
+            let res = getdeterminantDay(dayNumber);
+            document.write(`Результат = ${res}`);
+        } catch (error) {
+            document.write(`${error.message}`);
+        }
+        //  finally {
+        //     document.write(` Bye`);
+        // }
+    </script>
+</body>
+</html>

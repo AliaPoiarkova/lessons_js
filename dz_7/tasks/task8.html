@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task8</title>
+  </head>
+  <style>
+    .banner{
+        width: 600px;
+    margin: 0 auto;
+    }
+  </style>
+  <body>
+    <h3>
+      Задача №8. Створити функцію, яка виводить банер (у функцію передаються:
+      зображення, заголовок та посилання, куди переходимо при кліку на
+      зображення (тег img повине знаходитись у середині тега a:<а>
+        img src="шлях"</а>
+    </h3>
+
+    <script>
+      
+      const image = "../image/yevhen.png";
+      const title = "Найкращий курс з JavaScript!";
+      const url = "https://edu.fls.guru/js.html";
+
+      function blockContainer(image, title, url) {
+        return `<div class="banner"><a href=${url} target='blank' >
+                <img src='${image}' alt='Yevhen image'>
+                <h1>${title}</a>`;
+      }
+      document.write(`${blockContainer(image, title, url)}`);
+    </script>
+  </body>
+</html>

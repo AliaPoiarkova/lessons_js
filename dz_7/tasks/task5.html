@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task5</title>
+  </head>
+  <body>
+    <h3>
+      Задача 5. Створити окремі функції, які переводять: 1) Сантиметри у дюйми;
+      2) Кілограми у фунти; 3) Кілометри у милі.
+    </h3>
+    <script>
+      const inch = 0.393701;
+      const pound = 2.20462;
+      const mile = 0.621371;
+      let userConvCentToInch = parseFloat(
+        prompt(`Конвектор сантиметри у дюйми`, "100")
+      );
+      let userConvKilogramToPound = parseFloat(
+        prompt(`Конвектор кілограми у фунти`, "100")
+      );
+      let userConvKilometerToMile = parseFloat(
+        prompt(`Конвектор кілометри у милі`, "100")
+      );
+
+      function getCentToInch(userConvCentToInch) {
+        return userConvCentToInch * inch;
+      }
+
+      function getKilogramToPound(userConvKilogramToPound) {
+        return userConvKilogramToPound * pound;
+      }
+
+      function getKilometerToMile(userConvKilometerToMile) {
+        return userConvKilometerToMile * mile;
+      }
+      document.write(
+        `${userConvCentToInch} см = ${getCentToInch(userConvCentToInch).toFixed(
+          2
+        )} дюймів <br> ${userConvKilogramToPound} кг = ${getKilogramToPound(
+          userConvKilogramToPound
+        ).toFixed(
+          2
+        )} фунтів <br> ${userConvKilometerToMile} км = ${getKilometerToMile(
+          userConvKilometerToMile
+        ).toFixed(2)} міль <br>`
+      );
+    </script>
+  </body>
+</html>

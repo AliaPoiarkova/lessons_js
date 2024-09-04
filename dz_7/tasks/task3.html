@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task3</title>
+  </head>
+
+  <body>
+    <h3>
+      Задача №3. Створити окремі функції, які для 4 чисел знаходять: 1)суму;
+      2)добуток; 3)середнє арифметичне; 4)мінімальне значення.
+    </h3>
+    <script>
+      let userNum1 = parseFloat(prompt(`Введіть перше число`, "1"));
+      let userNum2 = parseFloat(prompt(`Введіть друге число`, "1"));
+      let userNum3 = parseFloat(prompt(`Введіть третє число`, "1"));
+      let userNum4 = parseFloat(prompt(`Введіть четверте число`, "1"));
+      function getSum(userNum1, userNum2, userNum3, userNum4) {
+        return userNum1 + userNum2 + userNum3 + userNum4;
+      }
+      function getProdact(userNum1, userNum2, userNum3, userNum4) {
+        return userNum1 * userNum2 * userNum3 * userNum4;
+      }
+      function getAverage(userNum1, userNum2, userNum3, userNum4) {
+        return (userNum1 + userNum2 + userNum3 + userNum4) / 4;
+      }
+      function getMinValue(userNum1, userNum2, userNum3, userNum4) {
+        return Math.min(userNum1, userNum2, userNum3, userNum4);
+      }
+      document.write(
+        `Для чисел ${userNum1} , ${userNum2} , ${userNum3}, ${userNum4}: <br> сума = ${getSum(
+          userNum1,
+          userNum2,
+          userNum3,
+          userNum4
+        ).toFixed(2)};  <br> добуток = ${getProdact(
+          userNum1,
+          userNum2,
+          userNum3,
+          userNum4
+        ).toFixed(2)}; <br> середнє арифметичне = ${getAverage(
+          userNum1,
+          userNum2,
+          userNum3,
+          userNum4
+        ).toFixed(2)}; <br> мінімальне значення = ${getMinValue(
+          userNum1,
+          userNum2,
+          userNum3,
+          userNum4
+        ).toFixed(2)}`
+      );
+    </script>
+  </body>
+</html>
