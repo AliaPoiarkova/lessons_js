@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task5</title>
+  </head>
+  <body>
+    <h3>
+      Задача 5. Дано масив імен учнів. З’ясувати скільки разів зустрічається
+      ім’я «Іван».
+    </h3>
+    <script>
+      let studentsNameList = [
+        "Сашко",
+        "Оля",
+        "Іван",
+        "Марія",
+        "Іван",
+        "Олена",
+        "Катя",
+        "Іван",
+        "Сергій",
+        "Катерина",
+      ];
+      function getCountIvan(studentsNameList) {
+        let nameIvan = 0;
+        for (let i = 0; i < studentsNameList.length; i++) {
+          if (studentsNameList[i].toLowerCase() === "іван") nameIvan++;
+        }
+        return nameIvan;
+      }
+      let res = getCountIvan(studentsNameList);
+      document.write(`Ім’я «Іван» зустрічається ${res} рази`);
+    </script>
+  </body>
+</html>

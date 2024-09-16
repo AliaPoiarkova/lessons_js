@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task2</title>
+  </head>
+  <body>
+    <h3>
+      Задача №2. Дано послідовність цін товарів та назв (у окремих масивах).
+      Вивести на екран ті, які може собі дозволити користувач (кількість грошей
+      задається).
+    </h3>
+    <script>
+      if (confirm("Почати тестування?")) {
+        let productsPrices = [150, 4000, 100, 500, 28500];
+        let productsTitles = [
+          "candel",
+          "powerbank",
+          "battery",
+          "flashlight",
+          "generator",
+        ];
+        const userMoney = parseFloat(
+          prompt(`Введіть скільки у вас грошей`, "10000")
+        );
+        function getProductToBuy(productsPrices, productsTitles, userMoney) {
+          let productToBuy = [];
+          for (let i = 0; i < productsPrices.length; i++) {
+            if (productsPrices[i] <= userMoney)
+              productToBuy.push(productsTitles[i]);
+          }
+          return productToBuy;
+        }
+        const productToBuy = getProductToBuy(
+          productsPrices,
+          productsTitles,
+          userMoney
+        );
+        document.write(`Ви можете купити: ${productToBuy}`);
+      }
+    </script>
+  </body>
+</html>

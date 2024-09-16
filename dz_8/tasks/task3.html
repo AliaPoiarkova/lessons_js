@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task3</title>
+  </head>
+  <body>
+    <h3>
+      Задача №3. Дано послідовність платіжок протягом року. Знайти сумарну
+      кількість грошей за: за весь рік; у першій половині року; у другій
+      половині року; за літо; за ІІ квартал; за парні місяці (з парними
+      номерами); за місяці, які є початковими у сезоні (весна, літо, осінь,
+      зима).
+    </h3>
+    <script>
+      if (confirm("Почати тестування?")) {
+        const paumentsList = [];
+        function getSumInRange(
+          valuesList,
+          startIndex,
+          endIndex,
+          indexStep = 1
+        ) {
+          let sum = 0;
+
+          for (let i = startIndex - 1; i < endIndex; i += indexStep) {
+            sum += valuesList[i];
+          }
+          return sum;
+        }
+        function sumPerForYear() {
+          for (let i = 1; i <= 12; i++) {
+            let userPayment = parseFloat(
+              prompt(`Введіть суму платежу за ${i} місяць`, "1500.00")
+            );
+            paumentsList.push(userPayment);
+          }
+        }
+        sumPerForYear();
+        let sumPerYear = getSumInRange(paumentsList, 1, 12);
+        let ferstHulf = getSumInRange(paumentsList, 1, 6);
+        let secondHulf = getSumInRange(paumentsList, 7, 12);
+        let forSummer = getSumInRange(paumentsList, 6, 8);
+        let secondQuarter = getSumInRange(paumentsList, 4, 6);
+        let forEvenMonthes = getSumInRange(paumentsList, 2, 12, 2);
+        let forStartSeasons = getSumInRange(paumentsList, 3, 12, 3);
+        document.write(
+          ` Сумарна
+      кількість грошей: <br> за весь рік - ${sumPerYear.toFixed(
+        2
+      )}грн. <br> за першу половину року - ${ferstHulf.toFixed(
+            2
+          )}грн. <br> за другу
+      половину року - ${secondHulf.toFixed(
+        2
+      )}грн. <br> за літо - ${forSummer.toFixed(
+            2
+          )}грн.<br> за ІІ квартал - ${secondQuarter.toFixed(
+            2
+          )}грн. <br> за парні місяці - ${forEvenMonthes.toFixed(
+            2
+          )}грн. <br> за місяці, які є початковими у сезоні (весна, літо, осінь,
+      зима) - ${forStartSeasons.toFixed(2)}грн.`
+        );
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task4</title>
+  </head>
+  <body>
+    <h3>
+      Задача №4. Дано одновимірний масив, у якому зберігається певна виграшна
+      сума (елементи заповнюються випадковим чином значеннями від -500 до 500).
+      Надаючи користувачу можливість вибирати номери елементів (поки він не
+      відмовиться). Знаходити сумарний виграш.
+    </h3>
+
+    <script>
+      if (confirm("Почати тестування?")) {
+        const element = 10;
+        const maxValue = 500;
+        const minValue = -500;
+        function getWinSum(element, maxValue, minValue) {
+          const items = [];
+          for (let i = 0; i < element; i++) {
+            const num =
+              minValue + Math.floor(Math.random() * (maxValue - minValue) + 1);
+            items.push(num);
+          }
+          return items;
+        }
+        const items = getWinSum(element, maxValue, minValue);
+        document.write(`Згенерований масив: ${items} <br>`);
+
+        function getUserWinSum(element, maxValue, minValue) {
+          let sum = 0;
+          let userPlay = true;
+
+          while (userPlay) {
+            let userItemsNum = parseInt(
+              prompt(
+                `Введіть номер елементу (від 1 до ${items.length}) або 0 щоб завершити`,
+                ""
+              )
+            );
+
+            if (userItemsNum === 0) {
+              userPlay = false;
+              break;
+            }
+
+            if (userItemsNum > 0 && userItemsNum <= items.length) {
+              sum += items;
+            } else {
+              alert("Невірний номер елементу! Спробуйте ще раз.");
+            }
+          }
+          return sum;
+        }
+        let sum = getUserWinSum(items);
+        document.write(`Сумарний виграш: ${sum} <br>`);
+      }
+    </script>
+  </body>
+</html>
