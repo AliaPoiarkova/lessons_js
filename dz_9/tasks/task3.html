@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task3</title>
+  </head>
+
+  <body>
+    <h3>
+      Задача №3. Користувач вводить кількість елементів. Створити масив, у якому
+      перші 5 елементів заповнені 1-цями, а інші до кінця масиву заповнені
+      7-ками.
+    </h3>
+    <script>
+      if (confirm("Почати тестування?")) {
+        let userNumOfElements = parseInt(prompt(`Введіть кількість елементів`));
+        let numElements = new Array(userNumOfElements);
+        numElements.fill(1, 0, 5);
+        numElements.fill(7, 5, userNumOfElements);
+        document.write(`${numElements}`);
+      }
+    </script>
+  </body>
+</html>

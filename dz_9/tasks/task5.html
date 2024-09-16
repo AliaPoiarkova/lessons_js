@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task5</title>
+  </head>
+  <body>
+    <h3>Задача 5. Дано масив елементів. Знайти добуток додатних елементів</h3>
+    <script>
+      let numbers = [3, -40, 50, 20, -400, 10, -700, 120];
+      let prodact = 1;
+      for (const element of numbers) {
+        if (element > 0) prodact *= element;
+      }
+      document.write(`${prodact}`);
+    </script>
+  </body>
+</html>

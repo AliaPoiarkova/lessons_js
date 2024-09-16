@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task7</title>
+  </head>
+  <body>
+    <h3>
+      Задача №7. Дано масив цін. Змінити цей масив так, що на ціни товарів, які
+      більші за 1000 грн. дати 30% знижки.
+    </h3>
+    <script>
+      let prices = [300, 1400, 5000, 250, 400, 2100, 120];
+      let pricesWithSale = prices.map((price) => {
+        if (price > 1000) {
+          return price - price * 0.3;
+        }
+        return price;
+      });
+      document.write(`${pricesWithSale}`);
+    </script>
+  </body>
+</html>

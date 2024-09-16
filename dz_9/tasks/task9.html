@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task9</title>
+  </head>
+  <body>
+    <h3>
+      Задача 9. Дано масив імен. Сформувати масив з перших літер цих імен.
+    </h3>
+    <script>
+      let namesList = [
+        "Петро",
+        "Емілія",
+        "Роман",
+        "Евеліна",
+        "Микола",
+        "Ольга",
+        "Галина",
+        "Андрій",
+      ];
+      let newListLetters = namesList.map((letter) => letter[0]);
+      document.write(`${newListLetters}`);
+    </script>
+  </body>
+</html>

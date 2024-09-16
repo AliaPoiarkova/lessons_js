@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task8</title>
+  </head>
+  <body>
+    <h3>
+      Задача №8. Дано масив номерів авто. Сформувати новий масив тих, які
+      починаються на «А»
+    </h3>
+
+    <script>
+      let carsNumbers = [
+        "АА7777",
+        "СА5555",
+        "ВА4444",
+        "АН3333",
+        "ВС2222",
+        "АО2525",
+        "СА8888",
+        "СВ1111",
+        "АВ2332",
+        "АТ4569",
+      ];
+      let newListCarsNumbers = carsNumbers.filter((number) =>
+        number.startsWith("А")
+      );
+      document.write(`${newListCarsNumbers}`);
+    </script>
+  </body>
+</html>
